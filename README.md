@@ -37,7 +37,7 @@ The software allows to test CPSRx4 from Python.
 	- FDCT: folder where your CurveLab installation is
 	- FFTW: folder where your fftw installation is
 
-3. In the PyCurvelab folder, run the following command:
+3. In the CPSRx4 folder, run the following command:
 
 	- python setup.py build install
 	- the package will be installed as pyct module
