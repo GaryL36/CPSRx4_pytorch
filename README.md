@@ -52,3 +52,28 @@ The software allows to test CPSRx4 from Python.
 run "python setup.py install --help" for more information`
 
 ***
+
+## Tips and Tricks for Dependencies
+
+### FFTW
+
+For FFTW 2.1.5, you must compile with position-independent code support. Do that with
+
+```bash
+./configure --with-pic --prefix=/home/user/opt/fftw-2.1.5 --with-gcc=/usr/bin/gcc
+```
+
+The `--prefix` and `--with-gcc` are optional and determine where it will install FFTW and where to find the GCC compiler, respectively. We recommend using the same compile for FFTW, CurveLab and `curvelops`.
+
+### CurveLab
+
+In the file `makefile.opt` set `FFTW_DIR`, `CC` and `CXX` variables as required in the instructions. To keep things consistent, set `FFTW_DIR=/home/user/opt/fftw-2.1.5` (or whatever directory was used in the `--prefix` option). For the others, use the same compiler which was used to compile FFTW.
+
+### curvelops
+
+The `FFTW` variable is the same as `FFTW_DIR` as provided in the CurveLab installation. The `FDCT` variable points to the root of the CurveLab installation. It will be something like `/path/to/CurveLab-2.1.3` for the latest version.
+
+## Disclaimer
+
+This package contains no CurveLab code apart from function calls. It is provided to simplify the use of CurveLab in a Python environment. Please ensure you own a CurveLab license as per required by the authors. See the [CurveLab website](http://curvelet.org/software.html) for more information. All CurveLab rights are reserved to Emmanuel Candes, Laurent Demanet, David Donoho and Lexing Ying.
+
