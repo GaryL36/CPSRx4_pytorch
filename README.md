@@ -1,5 +1,5 @@
 # CPSRx4_pytorch
-CPSRx4 test
+
 The software allows to test CPSRx4 from Python.
 
 
