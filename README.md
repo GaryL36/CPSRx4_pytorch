@@ -9,16 +9,20 @@ The software allows to test CPSRx4 from Python.
 	-> version 3.6 or above
 	-> http://www.python.org
 
-2. SWIG
+2. Pytorch
+	-> version 1.10.0 or above
+	-> https://pytorch.org/
+
+3. SWIG
 	-> version 1.3 or above
 	-> http://www.swig.org
 
-3. Numpy
+4. Numpy
 	-> module must be available in your PYTHONPATH environment variable in order to be found by 
 	-> version 1.0 or above
 	-> http://numpy.scipy.org/
 
-4. CurveLab
+5. CurveLab
 	-> version 2.0.2 or above
 	-> http://www.curvelet.org
 
